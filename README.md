@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-PDF Extractor is a web application that allows users to upload PDF files and automatically extract specific details such as Name, Phone Number, Address, and Role. The extracted information is then displayed in a user-friendly format on the frontend.
+PDF Extractor is a web application that allows users to upload PDF files and automatically extract specific details such as Name, Phone Number, Address, and Role. The extracted information is then displayed in a user-friendly format on the frontend. Live Demo link is attached at the end. Read the instructions carefully.
 
 ## Features
 
@@ -53,6 +53,7 @@ graph TD
    - Frontend: `npm start` in the frontend directory
    - Backend: `node server.js` in the backend directory
 4. Access the application at `http://localhost:3000`
+5.Check server.js file in backend and change the port number for cors use if application is not running on 3000.
 
 ## Usage
 
@@ -67,3 +68,6 @@ graph TD
 - Frontend: React, Axios
 - Backend: Node.js, Express, Multer
 - PDF Processing: Python, pdfplumber
+
+## Live Demo Link
+- https://loom.com/share/9f89e53fca454230a0ea5a9338799b1e

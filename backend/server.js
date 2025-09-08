@@ -3,15 +3,22 @@ const multer = require("multer")
 const { spawn } = require("child_process")
 const path = require("path")
 const cors = require("cors")
+const fs = require("fs") // <-- ADD THIS: Import File System module
 
 const app = express()
+
+// --- Create 'uploads' directory if it doesn't exist --- //
+const uploadsDir = path.join(__dirname, "uploads") // <-- ADD THIS
+if (!fs.existsSync(uploadsDir)) { // <-- ADD THIS
+  fs.mkdirSync(uploadsDir) // <-- ADD THIS
+} // <-- ADD THIS
 
 app.use(express.json({ limit: "10mb" }))
 app.use(express.urlencoded({ extended: true, limit: "10mb" }))
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3001", // Make sure this matches your React/frontend port
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   }),
@@ -96,6 +103,3 @@ const port = 5000
 app.listen(port, () => {
   console.log(`Server running on port ${port}`)
 })
-
-
-

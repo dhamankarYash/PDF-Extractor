@@ -4,6 +4,8 @@ import re
 import sys
 import os
 
+
+
 def extract_data_from_pdf(pdf_path):
     print(f"Processing PDF file: {pdf_path}", file=sys.stderr)
     
